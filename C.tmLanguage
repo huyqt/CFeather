@@ -65,14 +65,6 @@
         <!-- Storage --------------------------------------------------------->
         <dict>
             <key>name</key>
-            <string>storage.type.c</string>
-
-            <key>match</key>
-            <string>\b(char|double|float|int|long|short|signed|unsigned|void)\b</string>
-        </dict>
-
-        <dict>
-            <key>name</key>
             <string>storage.modifier.c</string>
 
             <key>match</key>
@@ -81,10 +73,26 @@
 
         <dict>
             <key>name</key>
+            <string>storage.type.c</string>
+
+            <key>match</key>
+            <string>\b(char|double|float|int|long|short|signed|unsigned|void)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
             <string>storage.type.struct.c</string>
 
             <key>match</key>
-            <string>\b(struct\s+[A-Za-z_][A-Za-z_0-9]*|[A-Za-z_][A-Za-z_0-9]*_t)\b</string>
+            <string>\b(struct\s+[A-Za-z_][A-Za-z_0-9]*)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>storage.type.typedef.c</string>
+
+            <key>match</key>
+            <string>\b([A-Za-z_][A-Za-z_0-9]*_t)\b</string>
         </dict>
 
         <!-- Keyword --------------------------------------------------------->
