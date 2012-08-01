@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>CFeather</string>
+
+    <key>scopeName</key>
+    <string>source.c</string>
+
+    <key>fileTypes</key>
+    <array>
+        <string>c</string>
+        <string>h</string>
+    </array>
+
+    <key>author</key>
+    <string>https://github.com/frou</string>
+
+    <key>uuid</key>
+    <string>5C89418E-D063-4595-82F7-9D026EEA6296</string>
+
+    <key>patterns</key>
+    <array>
+        <!-- Comment --------------------------------------------------------->
+        <dict>
+            <key>name</key>
+            <string>comment.block.c</string>
+
+            <key>begin</key>
+            <string>/\*</string>
+
+            <key>end</key>
+            <string>\*/</string>
+        </dict>
+
+        <!-- String ---------------------------------------------------------->
+        <dict>
+            <key>name</key>
+            <string>string.quoted.double.c</string>
+
+            <key>match</key>
+            <string>"([^\\]|\\([\\"'nrbtfav\?]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}))*?"</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>string.interpolated.preprocessor.c</string>
+
+            <key>begin</key>
+            <string>^\s*#</string>
+
+            <key>end</key>
+            <string>[^\\]\n</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>string.interpolated.label.c</string>
+
+            <key>match</key>
+            <string>^[A-Za-z_][A-Za-z_0-9]*:</string>
+        </dict>
+
+        <!-- Storage --------------------------------------------------------->
+        <dict>
+            <key>name</key>
+            <string>storage.type.c</string>
+
+            <key>match</key>
+            <string>\b(char|double|float|int|long|short|signed|unsigned|void)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>storage.modifier.c</string>
+
+            <key>match</key>
+            <string>\b(auto|const|extern|register|static|volatile)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>storage.type.struct.c</string>
+
+            <key>match</key>
+            <string>\b(struct\s+[A-Za-z_][A-Za-z_0-9]*|[A-Za-z_][A-Za-z_0-9]*_t)\b</string>
+        </dict>
+
+        <!-- Keyword --------------------------------------------------------->
+        <dict>
+            <key>name</key>
+            <string>keyword.control.c</string>
+
+            <key>match</key>
+            <string>\b(break|case|continue|default|do|else|enum|for|goto|if|return|sizeof|struct|switch|typedef|union|while)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>keyword.operator.compound.assignment.c</string>
+
+            <key>match</key>
+            <string>(\+=|-=|\*=|/=|%=|&lt;&lt;=|>>=|&amp;=|\^=|\|=)</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>keyword.operator.compound.other.c</string>
+
+            <key>match</key>
+            <string>(->|\+\+|--|&lt;&lt;|>>|&lt;=|>=|==|!=|&amp;&amp;|\|\|)</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>keyword.operator.simple.c</string>
+
+            <key>match</key>
+            <string>(!|%|\^|&amp;|\*|-|\+|=|~|\||\.|&lt;|>|/|\?)</string>
+        </dict>
+
+        <!-- Constant -------------------------------------------------------->
+        <dict>
+            <key>name</key>
+            <string>constant.numeric.c</string>
+
+            <key>match</key>
+            <string>\b(\d+\.\d+|\d+|0[xX][0-9A-Fa-f]+)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.character.c</string>
+
+            <key>match</key>
+            <string>'([^\\]|\\([\\"'nrbtfav\?]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}))??'</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.other.c</string>
+
+            <key>match</key>
+            <string>\b([A-Z_][A-Z_0-9]*)\b</string>
+        </dict>
+
+        <!-- Support (C Standard Library Identifiers) ------------------------>
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.errno.c</string>
+
+            <key>match</key>
+            <string>\b(EDOM|ERANGE|errno)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.stddef.c</string>
+
+            <key>match</key>
+            <string>\b(NULL|offsetof|ptrdiff_t|size_t|wchar_t)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.assert.c</string>
+
+            <key>match</key>
+            <string>\b(NDEBUG|assert)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.ctype.c</string>
+
+            <key>match</key>
+            <string>\b(isalnum|isalpha|iscntrl|isdigit|isgraph|islower|isprint|ispunct|isspace|isupper|isxdigit|tolower|toupper)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.locale.c</string>
+
+            <key>match</key>
+            <string>\b(LC_ALL|LC_COLLATE|LC_CTYPE|LC_MONETARY|LC_NUMERIC|LC_TIME|NULL|struct lconv|setlocale|localeconv)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.math.c</string>
+
+            <key>match</key>
+            <string>\b(HUGE_VAL|acos|asin|atan|atan2|cos|sin|tan|cosh|sinh|tanh|exp|frexp|ldexp|log|log10|modf|pow|sqrt|ceil|fabs|floor|fmod)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.setjmp.c</string>
+
+            <key>match</key>
+            <string>\b(jmp_buf|setjmp|longjmp)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.signal.c</string>
+
+            <key>match</key>
+            <string>\b(sig_atomic_t|SIG_DFL|SIG_ERR|SIG_IGN|SIGABRT|SIGFPE|SIGILL|SIGINT|SIGSEGV|SIGTERM|signal|raise)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.stdarg.c</string>
+
+            <key>match</key>
+            <string>\b(va_list|va_start|va_arg|va_end)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.stdio.c</string>
+
+            <key>match</key>
+            <string>\b(_IOFBF|_IOLBF|_IONBF|BUFSIZ|EOF|FILE|FILENAME_MAX|FOPEN_MAX|fpos_t|L_tmpnam|NULL|SEEK_CUR|SEEK_END|SEEK_SET|size_t|stderr|stdin|stdout|TMP_MAX|remove|rename|tmpfile|tmpnam|fclose|fflush|fopen|freopen|setbuf|setvbuf|fprintf|fscanf|printf|scanf|sprintf|sscanf|vfprintf|vprintf|vsprintf|fgetc|fgets|fputc|fputs|getc|getchar|gets|putc|putchar|puts|ungetc|fread|fwrite|fgetpos|fseek|fsetpos|ftell|rewind|clearerr|feof|ferror|perror)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.stdlib.c</string>
+
+            <key>match</key>
+            <string>\b(EXIT_FAILURE|EXIT_SUCCESS|MB_CUR_MAX|NULL|RAND_MAX|div_t|ldiv_t|size_t|wchar_t|atof|atoi|atol|strtod|strtol|strtoul|rand|srand|calloc|free|malloc|realloc|abort|atexit|exit|getenv|system|bsearch|qsort|abs|div|labs|ldiv|mblen|mbtowc|wctomb|mbstowcs|wcstombs)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.string.c</string>
+
+            <key>match</key>
+            <string>\b(NULL|size_t|memcpy|memmove|strcpy|strncpy|strcat|strncat|memcmp|strcmp|strcoll|strncmp|strxfrm|memchr|strchr|strcspn|strpbrk|strrchr|strspn|strstr|strtok|memset|strerror|strlen)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.time.c</string>
+
+            <key>match</key>
+            <string>\b(CLOCKS_PER_SEC|NULL|clock_t|time_t|size_t|struct tm|clock|difftime|mktime|time|asctime|ctime|gmtime|localtime|strftime)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.limits.c</string>
+
+            <key>match</key>
+            <string>\b(CHAR_BIT|CHAR_MAX|CHAR_MIN|INT_MAX|INT_MIN|LONG_MAX|LONG_MIN|MB_LEN_MAX|SCHAR_MAX|SCHAR_MIN|SHRT_MAX|SHRT_MIN|UCHAR_MAX|UINT_MAX|ULONG_MAX|USHRT_MAX)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>support.standardlibrary.float.c</string>
+
+            <key>match</key>
+            <string>\b(FLT_ROUNDS|DBL_DIG|DBL_MANT_DIG|DBL_MAX_10_EXP|DBL_MAX_EXP|DBL_MIN_10_EXP|DBL_MIN_EXP|FLT_DIG|FLT_MANT_DIG|FLT_MAX_10_EXP|FLT_MAX_EXP|FLT_MIN_10_EXP|FLT_MIN_EXP|FLT_RADIX|LDBL_DIG|LDBL_MANT_DIG|LDBL_MAX_10_EXP|LDBL_MAX_EXP|LDBL_MIN_10_EXP|LDBL_MIN_EXP|DBL_MAX|FLT_MAX|LDBL_MAX|DBL_EPSILON|DBL_MIN|FLT_EPSILON|FLT_MIN|LDBL_EPSILON|LDBL_MIN)\b</string>
+        </dict>
+    </array>
+</dict>
+</plist>

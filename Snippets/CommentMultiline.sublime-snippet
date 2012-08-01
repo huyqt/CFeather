@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+/*
+ * ${1:comment}
+ */
+]]></content>
+    <tabTrigger>comm</tabTrigger>
+    <scope>source.c</scope>
+</snippet>
