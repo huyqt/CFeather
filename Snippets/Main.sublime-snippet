@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+    return EXIT_SUCCESS;
+}
+]]></content>
+    <tabTrigger>main</tabTrigger>
+    <scope>source.c</scope>
+</snippet>
