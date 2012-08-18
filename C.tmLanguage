@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>name</key>
-    <string>CFeather</string>
+    <string>C</string>
 
     <key>scopeName</key>
     <string>source.c</string>
@@ -188,7 +188,7 @@
             <string>string.other.label.c</string>
 
             <key>match</key>
-            <string>^[A-Za-z_][A-Za-z_0-9]*:</string>
+            <string>^\s*(?!default:)[A-Za-z_][A-Za-z_0-9]*:</string>
         </dict>
 
         <!-- Storage --------------------------------------------------------->
@@ -205,7 +205,7 @@
             <string>storage.type.c</string>
 
             <key>match</key>
-            <string>\b(char|double|float|int|long|short|signed|unsigned|void|i8|u8|i16|u16|i32|u32|i64|u64|f32|f64)\b</string>
+            <string>\b(char|double|float|int|long|short|signed|unsigned|void)\b</string>
         </dict>
 
         <dict>
@@ -221,7 +221,7 @@
             <string>storage.type.typedef.c</string>
 
             <key>match</key>
-            <string>\b([A-Za-z_][A-Za-z_0-9]*_t)\b</string>
+            <string>\b(([A-Za-z_][A-Za-z_0-9]*_t)|i8|u8|i16|u16|i32|u32|i64|u64|f32|f64|byte|bool)\b</string>
         </dict>
 
         <!-- Keyword --------------------------------------------------------->
