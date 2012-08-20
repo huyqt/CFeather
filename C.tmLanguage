@@ -288,7 +288,7 @@
             <string>entity.name.function.c</string>
 
             <key>match</key>
-            <string>\b[A-Za-z_][A-Za-z_0-9]*(?=\()</string>
+            <string>\b[A-Za-z_][A-Za-z_0-9]*(?=\s*\()</string>
         </dict>
     </array>
 </dict>
