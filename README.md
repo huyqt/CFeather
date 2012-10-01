@@ -19,8 +19,6 @@ stock package ("C++") to the `ignored_packages` array in your settings file.
 
 ***
 
-Licensed under [Creative Commons BY-SA 3.0][license].
-
 [homepage]: https://github.com/frou/CFeather
 [st2]: http://www.sublimetext.com/
 [kiss]: http://en.wikipedia.org/wiki/KISS_principle
