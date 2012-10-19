@@ -17,10 +17,7 @@ names.
 For CFeather to be picked up by Sublime, you must first add the aforementioned
 stock package ("C++") to the `ignored_packages` array in your settings file.
 
-***
-
 [homepage]: https://github.com/frou/CFeather
 [st2]: http://www.sublimetext.com/
 [kiss]: http://en.wikipedia.org/wiki/KISS_principle
 [lang]: http://en.wikipedia.org/wiki/C_(programming_language)#ANSI_C_and_ISO_C
-[license]: http://creativecommons.org/licenses/by-sa/3.0/
