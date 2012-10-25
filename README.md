@@ -7,8 +7,8 @@ following reasons:
 * It's conflated with supporting C++ at the same time.
 * Its scope taxonomy doesn't [KISS][kiss].
 
-CFeather is targeted at [ISO C90 aka ANSI C89][lang] and its Standard Library.
-For convenience, the following non-standard constructs are also recognised:
+CFeather is targeted at [ISO C90 aka ANSI C89][lang]. For convenience, the
+following non-standard constructs are also recognised:
 
 * `(i|u)(8|16|32|64)`, `f(32|64)`, `byte` and `bool` as presumed `typedef`
 names.
