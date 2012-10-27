@@ -48,7 +48,7 @@
             <string>string.quoted.double.c</string>
 
             <key>match</key>
-            <string>"([^\\]|\\([\\"'nrbtfav\?]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}))*?"</string>
+            <string>(\bL)?"([^\\]|\\([\\"'nrbtfav\?]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}))*?"</string>
         </dict>
 
         <dict>
@@ -103,6 +103,47 @@
             <string>\b(([A-Za-z_][A-Za-z_0-9]*_t)|i8|u8|i16|u16|i32|u32|i64|u64|f32|f64|byte|bool)\b</string>
         </dict>
 
+        <!-- Constant -->
+        <dict>
+            <key>name</key>
+            <string>constant.numeric.floating-point.c</string>
+
+            <key>match</key>
+            <string>(\b[0-9]+)?\.[0-9]*([eE][+-]?[0-9]+)?[fFlL]?\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.numeric.floating-point.c</string>
+
+            <key>match</key>
+            <string>\b[0-9]+[eE][+-]?[0-9]+[fFlL]?\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.numeric.integer.c</string>
+
+            <key>match</key>
+            <string>\b(0[xX][0-9A-Fa-f]+|0[0-7]*|[1-9][0-9]*)([uU][lL]?|[lL][uU]?)?\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.character.c</string>
+
+            <key>match</key>
+            <string>'([^\\]|\\([\\"'nrbtfav\?]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}))??'</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.other.c</string>
+
+            <key>match</key>
+            <string>\b([A-Z_][A-Z_0-9]*)\b</string>
+        </dict>
+
         <!-- Keyword -->
         <dict>
             <key>name</key>
@@ -134,31 +175,6 @@
 
             <key>match</key>
             <string>(!|%|\^|&amp;|\*|-|\+|=|~|\||\.|&lt;|>|/|\?)</string>
-        </dict>
-
-        <!-- Constant -->
-        <dict>
-            <key>name</key>
-            <string>constant.numeric.c</string>
-
-            <key>match</key>
-            <string>\b(\d+\.\d+|\d+|0[xX][0-9A-Fa-f]+)\b</string>
-        </dict>
-
-        <dict>
-            <key>name</key>
-            <string>constant.character.c</string>
-
-            <key>match</key>
-            <string>'([^\\]|\\([\\"'nrbtfav\?]|[0-7]{1,3}|x[0-9A-Fa-f]{1,2}))??'</string>
-        </dict>
-
-        <dict>
-            <key>name</key>
-            <string>constant.other.c</string>
-
-            <key>match</key>
-            <string>\b([A-Z_][A-Z_0-9]*)\b</string>
         </dict>
 
         <!-- Entity -->
