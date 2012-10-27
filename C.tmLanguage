@@ -167,7 +167,7 @@
             <string>entity.name.function.c</string>
 
             <key>match</key>
-            <string>(?&lt;=[A-Za-z_0-9]\s)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <string>(?&lt;!\sreturn.)(?&lt;=[A-Za-z_0-9]\s)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
         </dict>
 
         <dict>
@@ -175,7 +175,7 @@
             <string>entity.name.function.c</string>
 
             <key>match</key>
-            <string>(?&lt;=[A-Za-z_0-9](\s\*|\*\s))\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <string>(?&lt;!\sreturn..)(?&lt;=[A-Za-z_0-9](\s\*|\*\s))\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
         </dict>
 
         <dict>
