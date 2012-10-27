@@ -55,8 +55,11 @@
             <key>name</key>
             <string>string.other.preprocessor.c</string>
 
-            <key>match</key>
-            <string>^\s*#.*</string>
+        <key>begin</key>
+        <string>^\s*#</string>
+
+        <key>end</key>
+        <string>[^\\]\n</string>
         </dict>
 
         <dict>
