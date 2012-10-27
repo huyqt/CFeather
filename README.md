@@ -24,4 +24,5 @@ The following screenshot shows C source code as classified by this package and c
 [st2]: http://www.sublimetext.com/
 [kiss]: http://en.wikipedia.org/wiki/KISS_principle
 [lang]: http://en.wikipedia.org/wiki/C_(programming_language)#ANSI_C_and_ISO_C
+[spc]: http://wbond.net/sublime_packages/package_control
 [sd]: https://github.com/frou/Sundried
