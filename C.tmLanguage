@@ -109,7 +109,7 @@
             <string>constant.numeric.floating-point.c</string>
 
             <key>match</key>
-            <string>(\b[0-9]+)?\.[0-9]*([eE][+-]?[0-9]+)?[fFlL]?\b</string>
+            <string>(\b[0-9]+\.[0-9]*|\.[0-9]+)([eE][+-]?[0-9]+)?[fFlL]?\b</string>
         </dict>
 
         <dict>
