@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
-enum ${1:name} {
-    ${2:VALUE}
+enum ${1} {
+    ${2}
 }${3};
 ]]></content>
     <tabTrigger>enum</tabTrigger>

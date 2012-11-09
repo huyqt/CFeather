@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-#include <${1:stdio}.h>
+#include <${1}.h>
 ]]></content>
     <tabTrigger>incs</tabTrigger>
     <scope>source.c</scope>

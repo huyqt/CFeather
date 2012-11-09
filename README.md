@@ -7,7 +7,7 @@ I created it because I'm not keen on Sublime's stock C package for the following
 
 CFeather is targeted at [ISO C90 aka ANSI C89][lang]. For convenience, the following non-standard constructs are also recognised:
 
-* `(i|u)(8|16|32|64)`, `f(32|64)`, `byte` and `bool` as presumed `typedef` names.
+* `(i|u)(8|16|32|64)`, `f(32|64)`, `byte` and `bool` as presumed type names.
 * `//` as the beginning of a line comment.
 
 For CFeather to be picked up by Sublime, you must first add the aforementioned stock package ("C++") to the `ignored_packages` array in your settings file.

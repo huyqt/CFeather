@@ -1,8 +1,8 @@
 <snippet>
     <content><![CDATA[
-${1:void} ${2:name}(${3:void})
+${1:void} ${2}(${3:void})
 {
-    ${4:body};
+    ${4}
 }
 ]]></content>
     <tabTrigger>func</tabTrigger>

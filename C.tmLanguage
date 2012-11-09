@@ -92,7 +92,7 @@
             <string>storage.type.tag.c</string>
 
             <key>match</key>
-            <string>\b((enum|struct|union)\s+[A-Za-z_][A-Za-z_0-9]*)\b</string>
+            <string>\b((enum|struct|union)\s+[A-Za-z_][A-Za-z_0-9]*)\b(?!\s*\{)</string>
         </dict>
 
         <dict>
