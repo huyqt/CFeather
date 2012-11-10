@@ -5,10 +5,10 @@ I created it because I'm not keen on Sublime's stock C package for the following
 * It's conflated with supporting C++ at the same time.
 * Its scope taxonomy doesn't [KISS][kiss].
 
-CFeather is targeted at [ISO C90 aka ANSI C89][lang]. For convenience, the following non-standard constructs are also recognised:
+CFeather is targeted at [ISO C90 aka ANSI C89][lang]. For convenience, some non-standard constructs are recognised:
 
-* `(i|u)(8|16|32|64)`, `f(32|64)`, `byte` and `bool` as presumed type names.
-* `//` as the beginning of a line comment.
+* `(i|u)(8|16|32|64)`, `f(32|64)`, `byte`, `bool` and anything with a `_t` suffix as type names.
+* `//` as the start of a line comment.
 
 For CFeather to be picked up by Sublime, you must first add the aforementioned stock package ("C++") to the `ignored_packages` array in your settings file.
 
@@ -16,7 +16,7 @@ This package is available direct from its GitHub homepage, and also via [Sublime
 
 ---
 
-The following screenshot shows C source code as classified by this package and coloured by my [Sundried][sd] colour scheme.
+Here's a screenshot. Remember that CFeather isn't about specific colours, but rather which colours are picked from your active colour scheme. The colour scheme it's paired with below is one I created, [Sundried][sd].
 
 ![Screenshot](https://github.com/frou/Sundried/raw/master/screenshot.png)
 
