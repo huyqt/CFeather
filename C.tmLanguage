@@ -20,9 +20,40 @@
     <key>uuid</key>
     <string>5C89418E-D063-4595-82F7-9D026EEA6296</string>
 
+    <key>repository</key>
+    <dict>
+        <key>doxygen-command</key>
+        <dict>
+            <key>name</key>
+            <string>comment.doxygen.command.c</string>
+
+            <key>match</key>
+            <string>[\\@]\S*</string>
+        </dict>
+    </dict>
+
     <key>patterns</key>
     <array>
         <!-- Comment -->
+        <dict>
+            <key>name</key>
+            <string>comment.doxygen.block.c</string>
+
+            <key>begin</key>
+            <string>/\*[\*!]</string>
+
+            <key>end</key>
+            <string>\*/</string>
+
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#doxygen-command</string>
+                </dict>
+            </array>
+        </dict>
+
         <dict>
             <key>name</key>
             <string>comment.block.c</string>
@@ -36,10 +67,32 @@
 
         <dict>
             <key>name</key>
+            <string>comment.doxygen.line.double-slash.c</string>
+
+            <key>begin</key>
+            <string>//[/!]</string>
+
+            <key>end</key>
+            <string>$</string>
+
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#doxygen-command</string>
+                </dict>
+            </array>
+        </dict>
+
+        <dict>
+            <key>name</key>
             <string>comment.line.double-slash.c</string>
 
-            <key>match</key>
-            <string>//.*</string>
+            <key>begin</key>
+            <string>//</string>
+
+            <key>end</key>
+            <string>$</string>
         </dict>
 
         <!-- String -->

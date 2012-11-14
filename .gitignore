@@ -1,3 +1,4 @@
 *.cache
 test.c
+doxy.h
 a.out
