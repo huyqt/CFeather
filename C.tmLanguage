@@ -22,19 +22,19 @@
 
     <key>repository</key>
     <dict>
-        <key>doxygen-command</key>
+        <key>comment-block</key>
         <dict>
             <key>name</key>
-            <string>comment.doxygen.command.c</string>
+            <string>comment.block.c</string>
 
-            <key>match</key>
-            <string>[\\@]\S*</string>
+            <key>begin</key>
+            <string>/\*</string>
+
+            <key>end</key>
+            <string>\*/</string>
         </dict>
-    </dict>
 
-    <key>patterns</key>
-    <array>
-        <!-- Comment -->
+        <key>comment-doxygen-block</key>
         <dict>
             <key>name</key>
             <string>comment.doxygen.block.c</string>
@@ -54,17 +54,19 @@
             </array>
         </dict>
 
+        <key>comment-line-double-slash</key>
         <dict>
             <key>name</key>
-            <string>comment.block.c</string>
+            <string>comment.line.double-slash.c</string>
 
             <key>begin</key>
-            <string>/\*</string>
+            <string>//</string>
 
             <key>end</key>
-            <string>\*/</string>
+            <string>$</string>
         </dict>
 
+        <key>comment-doxygen-line-double-slash</key>
         <dict>
             <key>name</key>
             <string>comment.doxygen.line.double-slash.c</string>
@@ -84,15 +86,37 @@
             </array>
         </dict>
 
+        <key>doxygen-command</key>
         <dict>
             <key>name</key>
-            <string>comment.line.double-slash.c</string>
+            <string>comment.doxygen.command.c</string>
 
-            <key>begin</key>
-            <string>//</string>
+            <key>match</key>
+            <string>[\\@]\S*</string>
+        </dict>
+    </dict>
 
-            <key>end</key>
-            <string>$</string>
+    <key>patterns</key>
+    <array>
+        <!-- Comment -->
+        <dict>
+            <key>include</key>
+            <string>#comment-doxygen-block</string>
+        </dict>
+
+        <dict>
+            <key>include</key>
+            <string>#comment-block</string>
+        </dict>
+
+        <dict>
+            <key>include</key>
+            <string>#comment-doxygen-line-double-slash</string>
+        </dict>
+
+        <dict>
+            <key>include</key>
+            <string>#comment-line-double-slash</string>
         </dict>
 
         <!-- String -->
@@ -108,11 +132,34 @@
             <key>name</key>
             <string>string.other.preprocessor.c</string>
 
-        <key>begin</key>
-        <string>^\s*#</string>
+            <key>begin</key>
+            <string>^\s*#</string>
 
-        <key>end</key>
-        <string>[^\\]\n</string>
+            <key>end</key>
+            <string>([^\\]|(?&lt;=\*/))\n</string>
+
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>include</key>
+                    <string>#comment-doxygen-block</string>
+                </dict>
+
+                <dict>
+                    <key>include</key>
+                    <string>#comment-block</string>
+                </dict>
+
+                <dict>
+                    <key>include</key>
+                    <string>#comment-doxygen-line-double-slash</string>
+                </dict>
+
+                <dict>
+                    <key>include</key>
+                    <string>#comment-line-double-slash</string>
+                </dict>
+            </array>
         </dict>
 
         <dict>
