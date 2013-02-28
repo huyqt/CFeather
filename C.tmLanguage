@@ -130,7 +130,7 @@
 
         <dict>
             <key>name</key>
-            <string>string.other.preprocessor.c</string>
+            <string>string.other.preprocessor.c meta.tag</string>
 
             <key>begin</key>
             <string>^\s*#</string>
@@ -161,6 +161,17 @@
                 </dict>
             </array>
         </dict>
+	
+        <dict>
+            <key>name</key>
+            <string>string.other.preprocessor.c.pragma meta.tag</string>
+
+            <key>begin</key>
+            <string>^\s*(PRAGMA)</string>
+
+            <key>end</key>
+            <string>[^\\]\n</string>	    
+        </dict>	
 
         <dict>
             <key>name</key>
@@ -200,7 +211,7 @@
             <string>storage.type.typedef.c</string>
 
             <key>match</key>
-            <string>\b(([A-Za-z_][A-Za-z_0-9]*_t)|i8|u8|i16|u16|i32|u32|i64|u64|f32|f64|byte|bool)\b</string>
+            <string>\b(([A-Za-z_][A-Za-z_0-9]*_t)|i8|u8|i16|u16|i32|u32|i64|u64|f32|f64|byte|bool|INT8|INT16|INT32|INT64|BOOL|UINT8|UINT16|UINT32|UINT64)\b</string>
         </dict>
 
         <!-- Constant -->
@@ -238,10 +249,18 @@
 
         <dict>
             <key>name</key>
-            <string>constant.other.c</string>
+            <string>constant.other.symbol</string>
 
             <key>match</key>
             <string>\b([A-Z_][A-Z_0-9]*)\b</string>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>constant.language.c</string>		
+
+            <key>match</key>
+            <string>\b(NULL|true|false|TRUE|FALSE)\b</string>
         </dict>
 
         <!-- Keyword -->
