@@ -136,7 +136,7 @@
             <string>^\s*#</string>
 
             <key>end</key>
-            <string>([^\\]|(?&lt;=\*/))\n</string>
+            <string>([^\\]|(?&lt;=\*/)).*?(?:(?=(?://|/\*))|$)</string>
 
             <key>patterns</key>
             <array>
