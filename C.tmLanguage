@@ -324,7 +324,7 @@
         <!-- Support -->
         <dict>
             <key>name</key>
-            <string>support.function.c</string>
+            <string>entity.name.function.c</string>
 
             <key>match</key>
             <string>\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
