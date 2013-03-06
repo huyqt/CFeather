@@ -263,7 +263,7 @@
             <string>\b(NULL|true|false|TRUE|FALSE)\b</string>
         </dict>
 
-        <!-- Keyword -->
+        <!-- Keyword (Excluding "*") -->
         <dict>
             <key>name</key>
             <string>keyword.c</string>
@@ -293,38 +293,67 @@
             <string>keyword.operator.simple.c</string>
 
             <key>match</key>
-            <string>(!|%|\^|&amp;|\*|-|\+|=|~|\||\.|&lt;|>|/|\?)</string>
+            <string>(!|%|\^|&amp;|-|\+|=|~|\||\.|&lt;|>|/|\?)</string>
         </dict>
 
         <!-- Entity -->
         <dict>
-            <key>name</key>
-            <string>entity.name.function.c</string>
-
             <key>match</key>
-            <string>(?&lt;!\sreturn.)(?&lt;=[A-Za-z_0-9]\s)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <string>(?&lt;!\sreturn)(?&lt;!\selse)(?&lt;=[A-Za-z_0-9])(\**)(\s*)(\**)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.operator.simple.c</string>
+                </dict>
+
+                <key>3</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.operator.simple.c</string>
+                </dict>
+
+                <key>4</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.function.c</string>
+                </dict>
+            </dict>
         </dict>
 
         <dict>
-            <key>name</key>
-            <string>entity.name.function.c</string>
-
             <key>match</key>
-            <string>(?&lt;!\sreturn..)(?&lt;=[A-Za-z_0-9](\s\*|\*\s))\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <string>(?&lt;=^)(\**)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>keyword.operator.simple.c</string>
+                </dict>
+
+                <key>2</key>
+                <dict>
+                    <key>name</key>
+                    <string>entity.name.function.c</string>
+                </dict>
+            </dict>
         </dict>
 
+        <!-- Keyword ("*") -->
         <dict>
             <key>name</key>
-            <string>entity.name.function.c</string>
+            <string>keyword.operator.simple.c</string>
 
             <key>match</key>
-            <string>(?&lt;=^)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <string>(\*)</string>
         </dict>
 
         <!-- Support -->
         <dict>
             <key>name</key>
-            <string>entity.name.function.c</string>
+            <string>support.function.c</string>
 
             <key>match</key>
             <string>\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
