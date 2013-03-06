@@ -280,7 +280,7 @@
         <!-- Entity -->
         <dict>
             <key>match</key>
-            <string>(?&lt;!\sreturn)(?&lt;=[A-Za-z_0-9])(\**)(\s*)(\**)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
+            <string>(?&lt;!\sreturn)(?&lt;!\selse)(?&lt;=[A-Za-z_0-9])(\**)(\s*)(\**)\b([A-Za-z_][A-Za-z_0-9]*)\b(?=\s*\()</string>
             <key>captures</key>
             <dict>
                 <key>1</key>
